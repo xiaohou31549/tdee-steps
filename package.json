@@ -1,0 +1,48 @@
+{
+  "name": "tdee-steps",
+  "version": "1.0.0",
+  "description": "BMR and TDEE equations with every step of the working: Mifflin-St Jeor, Katch-McArdle, activity factors, step-count and adaptive estimates. Zero dependencies.",
+  "keywords": [
+    "tdee",
+    "bmr",
+    "mifflin-st-jeor",
+    "katch-mcardle",
+    "calories",
+    "energy-expenditure",
+    "calculator",
+    "steps"
+  ],
+  "homepage": "https://tdeesteps.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaohou31549/tdee-steps.git"
+  },
+  "bugs": "https://github.com/xiaohou31549/tdee-steps/issues",
+  "license": "MIT",
+  "author": "TDEE Steps (https://tdeesteps.com)",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test test/*.test.ts",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "^5"
+  }
+}
